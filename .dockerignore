@@ -1,0 +1,13 @@
+.git
+.github
+.idea
+.vs
+**/bin
+**/obj
+**/TestResults
+coverage
+infra/data
+.env*
+!.env.example
+*.log
+README.md

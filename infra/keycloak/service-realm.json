@@ -1,0 +1,57 @@
+{
+  "realm": "service",
+  "enabled": true,
+  "registrationAllowed": false,
+  "roles": {
+    "realm": [
+      {
+        "name": "service-user",
+        "description": "May access the service API"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "service-api",
+      "name": "Service API",
+      "enabled": true,
+      "publicClient": true,
+      "directAccessGrantsEnabled": true,
+      "standardFlowEnabled": true,
+      "protocol": "openid-connect",
+      "redirectUris": ["http://localhost:*/*"],
+      "webOrigins": ["+"],
+      "protocolMappers": [
+        {
+          "name": "service-api-audience",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-audience-mapper",
+          "consentRequired": false,
+          "config": {
+            "included.client.audience": "service-api",
+            "id.token.claim": "false",
+            "access.token.claim": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "service-user",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Service",
+      "lastName": "User",
+      "email": "service-user@example.invalid",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "service",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["service-user"]
+    }
+  ]
+}

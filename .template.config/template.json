@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "bma-wtag",
+  "classifications": ["Web", "ASP.NET Core", "Microservice", "Clean Architecture"],
+  "identity": "bma-wtag.Templates.DotnetMicroservice",
+  "name": ".NET Microservice Starter",
+  "shortName": "wtag-microservice",
+  "preferNameDirectory": true,
+  "defaultName": "SampleService",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "symbols": {
+    "apiProject": {
+      "type": "generated",
+      "generator": "join",
+      "parameters": {
+        "separator": ".",
+        "symbols": [
+          { "type": "ref", "value": "name" },
+          { "type": "const", "value": "Api" }
+        ]
+      },
+      "replaces": "Service.Api",
+      "fileRename": "Service.Api"
+    },
+    "applicationProject": {
+      "type": "generated",
+      "generator": "join",
+      "parameters": {
+        "separator": ".",
+        "symbols": [
+          { "type": "ref", "value": "name" },
+          { "type": "const", "value": "Application" }
+        ]
+      },
+      "replaces": "Service.Application",
+      "fileRename": "Service.Application"
+    },
+    "domainProject": {
+      "type": "generated",
+      "generator": "join",
+      "parameters": {
+        "separator": ".",
+        "symbols": [
+          { "type": "ref", "value": "name" },
+          { "type": "const", "value": "Domain" }
+        ]
+      },
+      "replaces": "Service.Domain",
+      "fileRename": "Service.Domain"
+    },
+    "infrastructureProject": {
+      "type": "generated",
+      "generator": "join",
+      "parameters": {
+        "separator": ".",
+        "symbols": [
+          { "type": "ref", "value": "name" },
+          { "type": "const", "value": "Infrastructure" }
+        ]
+      },
+      "replaces": "Service.Infrastructure",
+      "fileRename": "Service.Infrastructure"
+    },
+    "unitTestsProject": {
+      "type": "generated",
+      "generator": "join",
+      "parameters": {
+        "separator": ".",
+        "symbols": [
+          { "type": "ref", "value": "name" },
+          { "type": "const", "value": "UnitTests" }
+        ]
+      },
+      "replaces": "Service.UnitTests",
+      "fileRename": "Service.UnitTests"
+    },
+    "integrationTestsProject": {
+      "type": "generated",
+      "generator": "join",
+      "parameters": {
+        "separator": ".",
+        "symbols": [
+          { "type": "ref", "value": "name" },
+          { "type": "const", "value": "IntegrationTests" }
+        ]
+      },
+      "replaces": "Service.IntegrationTests",
+      "fileRename": "Service.IntegrationTests"
+    },
+    "architectureTestsProject": {
+      "type": "generated",
+      "generator": "join",
+      "parameters": {
+        "separator": ".",
+        "symbols": [
+          { "type": "ref", "value": "name" },
+          { "type": "const", "value": "ArchitectureTests" }
+        ]
+      },
+      "replaces": "Service.ArchitectureTests",
+      "fileRename": "Service.ArchitectureTests"
+    },
+    "solutionFile": {
+      "type": "generated",
+      "generator": "join",
+      "parameters": {
+        "separator": ".",
+        "symbols": [
+          { "type": "ref", "value": "name" },
+          { "type": "const", "value": "slnx" }
+        ]
+      },
+      "replaces": "Service.slnx",
+      "fileRename": "Service.slnx"
+    }
+  },
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".git/**",
+        ".idea/**",
+        ".template.config/**",
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        "**/TestResults/**",
+        "Service.Template.csproj"
+      ]
+    }
+  ]
+}

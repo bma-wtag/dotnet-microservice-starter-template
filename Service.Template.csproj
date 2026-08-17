@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>bma-wtag.Templates.DotnetMicroservice</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Title>.NET Microservice Starter Template</Title>
+    <Description>Reusable .NET 10 ASP.NET Core microservice starter template.</Description>
+    <Authors>bma-wtag</Authors>
+    <PackageTags>dotnet-new;template;aspnetcore;microservice</PackageTags>
+    <PackageType>Template</PackageType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="**/*"
+             Exclude=".git/**;.idea/**;**/bin/**;**/obj/**;**/TestResults/**;*.nupkg;*.snupkg"
+             Pack="true"
+             PackagePath="content" />
+    <None Include="README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,47 @@
+# Build outputs
+[Bb]in/
+[Oo]bj/
+artifacts/
+publish/
+
+# Test and coverage outputs
+[Tt]est[Rr]esult*/
+coverage/
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+
+# IDE and local tooling
+.vs/
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+_ReSharper*/
+*.DotSettings.user
+
+# Logs and runtime artifacts
+*.log
+logs/
+*.pid
+.DS_Store
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.*.local.json
+secrets.json
+
+# Docker and local infrastructure data
+infra/data/
+.docker/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
