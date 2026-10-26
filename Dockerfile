@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7
-FROM mcr.microsoft.com/dotnet/sdk:10.0.300 AS restore
+FROM mcr.microsoft.com/dotnet/sdk:10.0.403 AS restore
 WORKDIR /source
 
 COPY global.json Directory.Build.props Directory.Packages.props ./
